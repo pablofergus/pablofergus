@@ -13,13 +13,14 @@ const { post } = Astro.props;
 
 <SummaryCard
   title={post.data.title}
+  author={post.data.author}
+  workUrl={post.data.workUrl}
   imgAlt={post.data.title}
   imgSrc={post.data.imgUrl}
-  description={post.data.description}
 >
-  <div class='flex justify-end my-4'>
+  <!-- <div class='flex justify-end my-4'>
     <Button href={`/works/${post.slug}/`}>Read post &rarr;</Button>
-  </div>
+  </div> -->
 
   <div class='hidden sm:inline-block'>
     <p class='poppins mt-2'>tags:</p>

@@ -4,25 +4,30 @@ import { Image } from 'astro:assets';
 
 interface Props {
   title: string;
+  author: author;
+  workUrl: workUrl;
   imgSrc: ImageMetadata;
   imgAlt: string;
-  description: string;
+  // description: string;
 }
 
-const { title, imgAlt, imgSrc, description } = Astro.props;
+const { title, author, workUrl, imgAlt, imgSrc } = Astro.props;
 ---
 
 <Card color='white'>
   <h3 class='poppins text-lg md:text-xl'>{title}</h3>
-  <div class='rounded-lg border-3 border-black my-4 h-56'>
-    <Image
-      src={imgSrc}
-      alt={imgAlt}
-      width={800}
-      height={400}
-      class='rounded h-full w-full object-cover'
-    />
+  <h2 class='poppins text-lg md:text-xl'>{author}</h2>
+  <div class='rounded-lg border-3 border-black my-4 h-100'>
+    <a href={workUrl} target="_blank">
+      <Image
+        src={imgSrc}
+        alt={imgAlt}
+        width={373}
+        height={373}
+        class='rounded h-full w-full object-cover'
+      />
+    </a>
   </div>
-  <p class='poppins'>{description}</p>
+  <!-- <p class='poppins'>{description}</p> -->
   <slot />
 </Card>

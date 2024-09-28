@@ -9,9 +9,11 @@ interface Props {
 const { posts } = Astro.props;
 ---
 
-<ul class='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+<ul class='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
   {
-    posts.map((post) => {
+    posts.sort((a, b) => (
+        a.data.pubDate.getTime() < b.data.pubDate.getTime() ? -1 : 1
+    )).reverse().map((post) => {
       return (
         <li>
           <WorkSummaryCard post={post} />

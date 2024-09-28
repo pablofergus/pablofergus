@@ -4,8 +4,8 @@ import { getCollection } from 'astro:content';
 export async function GET(context) {
   const works = await getCollection('works');
   return rss({
-    title: 'Brutal Blog',
-    description: 'Brutal is a theme for Astro',
+    title: 'Pablo Fergus',
+    description: 'Producer and MD',
     stylesheet: false,
     site: context.site,
     items: works.map((post) => ({
@@ -15,6 +15,6 @@ export async function GET(context) {
       link: `/works/${post.slug}/`,
     })),
     customData: '<language>en-us</language>',
-    canonicalUrl: 'https://brutal.elian.codes',
+    canonicalUrl: 'https://pablofergus.com',
   });
 }

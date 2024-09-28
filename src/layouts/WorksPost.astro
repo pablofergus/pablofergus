@@ -7,12 +7,12 @@ import RecentWorksPosts from '@components/generic/RecentWorks.astro';
 const ogImage = new URL(`/v1/generate/og/${Astro.params.slug}.png`, Astro.url);
 
 const { content, headings } = Astro.props;
-const { title, description } = content;
+const { title, author } = content;
 ---
 
 <Layout
   title={title as string}
-  description={description as string}
+  description={author as string}
   ogImage={ogImage}
 >
   <main class='p-6 lg:grid lg:grid-cols-3 flex justify-center'>
