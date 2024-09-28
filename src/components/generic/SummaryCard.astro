@@ -4,14 +4,14 @@ import { Image } from 'astro:assets';
 
 interface Props {
   title: string;
-  author: author;
-  workUrl: workUrl;
+  author: string;
+  workUrl: string;
   imgSrc: ImageMetadata;
   imgAlt: string;
   description: string;
 }
 
-const { title, author, workUrl, imgAlt, imgSrc, description } = Astro.props;
+const { title, author, workUrl, imgAlt, imgSrc } = Astro.props;
 ---
 
 <Card color='white'>
