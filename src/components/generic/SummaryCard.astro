@@ -8,16 +8,15 @@ interface Props {
   workUrl: workUrl;
   imgSrc: ImageMetadata;
   imgAlt: string;
-  // description: string;
+  description: string;
 }
 
-const { title, author, workUrl, imgAlt, imgSrc } = Astro.props;
+const { title, author, workUrl, imgAlt, imgSrc, description } = Astro.props;
 ---
 
 <Card color='white'>
-  <h3 class='poppins text-lg md:text-xl'>{title}</h3>
-  <h2 class='poppins text-lg md:text-xl'>{author}</h2>
-  <div class='rounded-lg border-3 border-black my-4 h-100'>
+  <h3 class='poppins text-lg md:text-xl'><span style="font-weight:bold;">{title}</span> - {author}</h3>
+  <div class='rounded-lg border-3 border-black my-4 h-100' style="height:100%; ">
     <a href={workUrl} target="_blank">
       <Image
         src={imgSrc}

@@ -1,20 +1,16 @@
 ---
 const socials = [
   {
-    name: 'GitHub',
-    url: 'https://github.com/eliancodes',
-    icon: 'i-uil-github',
+    name: 'Instagram',
+    url: 'https://www.instagram.com/pablofergus/',
+    icon: 'fa fa-instagram',
   },
   {
     name: 'Twitter',
-    url: 'https://www.twitter.com/eliancodes',
-    icon: 'i-uil-twitter',
+    url: 'https://www.twitter.com/pablofergus',
+    icon: 'fa fa-twitter',
   },
-  {
-    name: 'LinkedIn',
-    url: 'https://www.linkedin.com/in/elianvancutsem',
-    icon: 'i-uil-linkedin',
-  },
+  { name: 'eMail', url: 'mailto:pablofergus@gmail.com', icon: 'fa fa-at' },
 ];
 ---
 
@@ -23,7 +19,7 @@ const socials = [
   <ul class='flex justify-between'>
     {
       socials.map((item) => (
-        <li class='bg-white px-4 py-2 text-green border-black border-2 rounded card-shadow'>
+        <li class='bg-white px-4 py-2 text-red border-black border-2 rounded card-shadow'>
           <a href={item.url} target='_blank' title={`Go to ${item.name}`}>
             <div class:list={[item.icon, 'p-6']} />
           </a>
