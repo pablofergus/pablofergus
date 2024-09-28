@@ -1,9 +1,9 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import BlogSummaryCard from './BlogSummaryCard.astro';
+import WorkSummaryCard from '@components/works/WorkSummaryCard.astro';
 
 interface Props {
-  posts: CollectionEntry<'blog'>[];
+  posts: CollectionEntry<'works'>[];
 }
 
 const { posts } = Astro.props;
@@ -14,7 +14,7 @@ const { posts } = Astro.props;
     posts.map((post) => {
       return (
         <li>
-          <BlogSummaryCard post={post} />
+          <WorkSummaryCard post={post} />
         </li>
       );
     })

@@ -1,14 +1,14 @@
 ---
-title: Blogpost 5
+title: Workspost 4
 author: Elian Van Cutsem
-pubDate: 2023-02-19 18:37
+pubDate: 2023-02-15 12:00
 tags:
   - Astro
   - JavaScript
-  - Theme
+  - Web Development
 description: Lorem markdownum longo os thyrso telum, continet servat fetus nymphae, vox nocte sedesque, decimo. Omnia esse, quam sive; conplevit illis indestrictus admovit dedit sub quod protectus, impedit non.
 imgUrl: '../../assets/astro.jpeg'
-layout: "../../layouts/BlogPost.astro"
+layout: "../../layouts/WorksPost.astro"
 ---
 
 ## Deorum petiit ignis

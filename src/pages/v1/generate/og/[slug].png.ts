@@ -12,7 +12,7 @@ const fontData: ArrayBuffer = await fontFile.arrayBuffer();
 const height = 630;
 const width = 1200;
 
-const posts = await getCollection('blog');
+const posts = await getCollection('works');
 
 export function getStaticPaths() {
   return posts.map((post) => ({
@@ -22,7 +22,7 @@ export function getStaticPaths() {
 }
 
 export const GET: APIRoute = async ({ params, props }) => {
-  const title = props.title.trim() ?? 'Blogpost';
+  const title = props.title.trim() ?? 'workspost';
   const description = props.description ?? null;
   const html = toReactElement(`
   <div style="background-color: white; display: flex; flex-direction: column; height: 100%; padding: 3rem; width: 100%">
