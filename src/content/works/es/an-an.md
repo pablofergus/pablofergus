@@ -11,6 +11,6 @@ tags:
 imgUrl: '@assets/an.jpg'
 workUrl: 'https://open.spotify.com/album/7C2RrxAFNTX0qklJnrHXTj?si=vbfcslh8Rdu3gjO82ZB3MQ'
 description: Grabación y producción con Carlos Elías Caballero.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---
 

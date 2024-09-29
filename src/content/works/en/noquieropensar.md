@@ -10,6 +10,6 @@ tags:
 imgUrl: '@assets/noquieropensar.jpeg'
 workUrl: 'https://open.spotify.com/track/5SBEWvhRs2AblEhWdyEbm2?si=bc6ec07a221f4bc9'
 description: Recording and production with Álex Moreno.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---
 

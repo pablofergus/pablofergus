@@ -8,5 +8,5 @@ tags:
 imgUrl: '@assets/ab67616d0000b27346c9ad86e37ff9f82d51ce01.jpeg'
 workUrl: 'https://open.spotify.com/album/5q2YrymkOfxvuMLkH7iiA0?si=304niwHgQqW0GEE66QIapg'
 description: Grabación de baterías y voces. Mezcla por Pablo Martín.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---

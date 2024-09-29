@@ -8,6 +8,6 @@ tags:
 imgUrl: '@assets/novoyaestar.jpeg'
 workUrl: 'https://open.spotify.com/track/4XMrmhyR8H1vVcEUDNWR0M?si=a6fe893d1d2f476f'
 description: Mix and master.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---
 

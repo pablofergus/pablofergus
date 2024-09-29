@@ -7,5 +7,5 @@ tags:
 imgUrl: '@assets/FUFXgI8WAAInjEI.jpg'
 workUrl: 'https://x.com/DaniFdez/status/1531601743297093632'
 description: Live keys/synths.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---

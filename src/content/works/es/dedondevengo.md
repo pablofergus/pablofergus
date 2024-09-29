@@ -7,5 +7,5 @@ tags:
 imgUrl: '@assets/ab67616d0000b273120a98a03ff7ff071d161ff2.jpeg'
 workUrl: 'https://open.spotify.com/album/7sMx5pfm7O0MXdw80dNVLO?si=CFikC5SmSYGjkk_fiWtCPQ'
 description: Grabación de guitarras y percusión.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---

@@ -8,6 +8,6 @@ tags:
 imgUrl: '@assets/lukycharm.jpg'
 workUrl: 'https://open.spotify.com/album/5zgrCT2k67t0fFflJSuUOh?si=KgXL2zNFQWWkHO8G2qEK7Q'
 description: Recording and production with Álex Moreno.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---
 

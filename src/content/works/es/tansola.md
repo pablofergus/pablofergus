@@ -8,6 +8,6 @@ tags:
 imgUrl: '@assets/tansola.png'
 workUrl: 'https://open.spotify.com/album/6WHLcDZRdOZIVcpbATSrZg?si=ZUP8-oA6TvW7hVauwBqFiQ'
 description: Producción por Marlon Pacho Salcedo.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---
 

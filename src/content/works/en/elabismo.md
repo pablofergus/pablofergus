@@ -8,5 +8,5 @@ tags:
 imgUrl: '@assets/ab67616d0000b2734cbf9927a371c9fac67aa5b1.jpeg'
 workUrl: 'https://open.spotify.com/album/2mpQRwJdkeQh3QWdmHLkjg?si=l3ykSLsOTsCS_IO_gawdJQ'
 description: Produced and mixed by Manuel Cabezalí.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---

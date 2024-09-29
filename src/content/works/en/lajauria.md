@@ -8,5 +8,5 @@ tags:
 imgUrl: '@assets/453478364_18453587527051015_7207862684216122584_n.jpg'
 workUrl: 'https://www.facebook.com/photo/?fbid=1049229263229436&set=a.247350930083944'
 description: Live keys/synths, and musical direction.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---

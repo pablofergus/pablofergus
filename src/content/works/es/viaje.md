@@ -9,6 +9,6 @@ tags:
 imgUrl: '@assets/viaje.jpg'
 workUrl: 'https://open.spotify.com/album/4jHQGNe22JkoBTmaHa2DSF?si=nvNlFApUTSy1HyHg-WRGaA'
 description: Grabación y producción.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---
 

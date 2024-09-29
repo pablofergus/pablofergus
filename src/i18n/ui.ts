@@ -1,7 +1,6 @@
 export const languages = {
     en: 'EN',
     es: 'ES',
-    default: '',
   };
   
   export const defaultLang = 'es';
@@ -22,7 +21,8 @@ export const languages = {
       'tags.synths': 'Synths',
       'tags.mix': 'Mix',
       'tags.mastering': 'Mastering',
-      'tags.md': 'Musical Direction'
+      'tags.md': 'Musical Direction',
+      'gen.onthispagecredits': 'On this page you can find my credits',
     },
     es: {
       'nav.home': 'Inicio',
@@ -39,7 +39,8 @@ export const languages = {
       'tags.synths': 'Sintetizadores',
       'tags.mix': 'Mezcla',
       'tags.mastering': 'Mastering',
-      'tags.md': 'Dirección Musical'
+      'tags.md': 'Dirección Musical',
+      'gen.onthispagecredits': 'En esta página podéis ver mis créditos',
     },
   } as const;
 

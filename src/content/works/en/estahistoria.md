@@ -10,5 +10,5 @@ tags:
 imgUrl: '@assets/ab67616d0000b2734733d3936f95d81c98a1af1f.jpeg'
 workUrl: 'https://open.spotify.com/album/1nzm7XdIQU2Tg5XBWHew1O?si=gTp_1HPhRn2v_5ruWdOHhA'
 description: Produced with Carlos Elías Caballero.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---

@@ -9,5 +9,5 @@ tags:
 imgUrl: '@assets/ab67616d0000b273d7302908e409defd3085c626.jpeg'
 workUrl: 'https://open.spotify.com/album/6WzzK3zaAyi46FG9mOeoEo?si=Z4j38hAnQCqpdZM8H8jPZw'
 description: Mixed and mastered by Rubén Montes.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---

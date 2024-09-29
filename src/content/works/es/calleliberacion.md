@@ -8,6 +8,6 @@ tags:
 imgUrl: '@assets/cl.jpg'
 workUrl: 'https://open.spotify.com/album/4CpKVhjbOlHsTu9kblFMMQ?si=OJkT0tvYQVSW1l5hdxGHzg'
 description: Grabación y producción con Carlos Elías Caballero. Mixed por Rául López en La Mina.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---
 

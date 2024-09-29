@@ -11,5 +11,5 @@ tags:
 imgUrl: '@assets/ab67616d0000b273da7a60e480377656635e85bc.jpeg'
 workUrl: 'https://open.spotify.com/album/3UZeNDgx7IAytlSOih4wVn?si=AO1RXVe_QsakHgtKWpl-4Q'
 description: "Solo los siguientes temas: radiofutura, la de cupido, colgado de tu amiga. Grabación y producción con Álex Moreno."
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---

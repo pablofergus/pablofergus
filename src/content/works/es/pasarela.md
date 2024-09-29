@@ -7,5 +7,5 @@ tags:
 imgUrl: '@assets/ab67616d0000b273b11262e705476a5425950bf9.jpeg'
 workUrl: 'https://open.spotify.com/album/31TBz22wU0tj6LmyeeAuti?si=_R6dJ5wPSdSU5RZckgo6Rg'
 description: Mezclado por Hector Castillo.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---

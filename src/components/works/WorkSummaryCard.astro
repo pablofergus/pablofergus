@@ -2,8 +2,9 @@
 import type { CollectionEntry } from 'astro:content';
 import { Pill } from '@eliancodes/brutal-ui';
 import SummaryCard from '@components/generic/SummaryCard.astro';
-import { Button } from '@eliancodes/brutal-ui';
+//import { Button } from '@eliancodes/brutal-ui';
 import { getLangFromUrl, getLangFromUrlOrBlank, useTranslations } from '../../i18n/utils';
+import type { ui } from 'src/i18n/ui';
 
 const langOB = getLangFromUrlOrBlank(Astro.url);
 const lang = getLangFromUrl(Astro.url);
@@ -34,10 +35,11 @@ const { post } = Astro.props;
       <ul class='flex flex-wrap gap-4 mt-2'>
         {
           post.data.tags.map((tag) => {
+            var tag_selector = tag as keyof typeof t;
             return (
               <li>
                 <a class="sanchez" href={`/${langOB}works/tags/${tag.toLowerCase()}/`}>
-                  <Pill>{t(tag)}</Pill>
+                  <Pill>{t(tag_selector)}</Pill>
                 </a>
               </li>
             );

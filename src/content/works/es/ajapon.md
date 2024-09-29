@@ -11,6 +11,6 @@ tags:
 imgUrl: '@assets/ajapon.jpeg'
 workUrl: 'https://open.spotify.com/album/27GSkS0XQsdiwRJePKngZA?si=zJuzO112Siiwu6zSQ2vAsg'
 description: Grabación y producción con Álex Moreno.
-layout: '../../layouts/WorksPost.astro'
+layout: '../../../layouts/WorksPost.astro'
 ---
 
