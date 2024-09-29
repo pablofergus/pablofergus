@@ -2,7 +2,14 @@
 import { getCollection } from 'astro:content';
 import Layout from '@layouts/Default.astro';
 import WorkList from '@components/works/WorkList.astro';
-const posts = await getCollection('works').then((collection) =>
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const posts = await getCollection('works', ({ id }) => {
+    return id.startsWith(lang+'/');
+  }).then((collection) =>
   collection.reverse()
 );
 ---

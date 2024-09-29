@@ -1,6 +1,10 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import WorkSummaryCard from '@components/works/WorkSummaryCard.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
   posts: CollectionEntry<'works'>[];
@@ -11,7 +15,9 @@ const { posts } = Astro.props;
 
 <ul class='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
   {
-    posts.sort((a, b) => (
+    posts.filter(({id}) => {
+      return id.startsWith(lang+'/');
+    }).sort((a, b) => (
         a.data.pubDate.getTime() < b.data.pubDate.getTime() ? -1 : 1
     )).reverse().map((post) => {
       return (

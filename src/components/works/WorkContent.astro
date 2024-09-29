@@ -1,4 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 interface Props {
   content: any;
 }
@@ -7,11 +12,11 @@ const { content } = Astro.props;
 ---
 
 <article class='prose-slate w-sm md:w-prose md:prose poppins'>
-  <a href='/works/' title='Back to works'>&larr; Back to works</a>
+  <a href='/works/' title={t('works.backtocredits')}>&larr; {t('works.backtocredits')}</a>
   <p class='text-slate text-sm md:text-base'>
     Published on {content.pubDate} by {content.author}
   </p>
   <slot />
   <p class='text-slate'>By {content.author}</p>
-  <a href='/works/' title='Back to works'>&larr; Back to works</a>
+  <a href='/works/' title={t('works.backtocredits')}>&larr; {t('works.backtocredits')}</a>
 </article>

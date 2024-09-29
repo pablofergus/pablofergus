@@ -4,6 +4,10 @@ import WorkList from '@components/works/WorkList.astro';
 import { Card } from '@eliancodes/brutal-ui';
 import { Button } from '@eliancodes/brutal-ui';
 import type { arrayOutputType } from 'astro:schema';
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
   count?: number;
@@ -11,21 +15,23 @@ interface Props {
 
 const { count } = Astro.props;
 
-const posts = await getCollection('works').then((posts) =>
-  posts.sort((a, b) => (
+const posts = await getCollection('works', ({ id }) => {
+  return id.startsWith(lang+'/');
+}).then((posts) => {
+  return posts.sort((a, b) => (
         a.data.pubDate.getTime() < b.data.pubDate.getTime() ? -1 : 1
     )).reverse().slice(0, count ?? 8)
-);
+});
 ---
 <!-- .slice(0, count ?? 4) -->
 <section class='mt-8'>
   <Card>
     <div class='flex justify-between items-start'>
       <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-        Recent credits
+        {t('works.recentcredits')}
       </h2>
       <div class='hidden md:block'>
-        <Button href='/works/'>Go to credits &rarr;</Button>
+        <Button href='/works/'>{t('works.gotocredits')} &rarr;</Button>
       </div>
       <div class='block md:hidden'>
         <Button href='/works/'>to credits</Button>

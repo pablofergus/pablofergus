@@ -40,13 +40,13 @@ const { tag, worksposts } = Astro.props;
 ---
 
 <Layout
-  title={`Works: ${tag}`}
-  description={`Works | All posts tagged with ${tag}`}
-  pageTitle={`Works | Tagged with ${tag}`}
+  title={`Créditos: ${tag}`}
+  description={`Créditos | Todos los créditos de ${tag}`}
+  pageTitle={`Créditos | De ${tag}`}
 >
   <main class='p-6 bg-purple grid gap-4'>
     <div>
-      <Button href='/works/'>&larr; Back to works</Button>
+      <Button href='/works/'>&larr; Volver a los créditos</Button>
     </div>
     <WorkList posts={worksposts} />
   </main>

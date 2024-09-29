@@ -1,0 +1,15 @@
+---
+import { languages } from '../../i18n/ui';
+import { getLangFromUrl, useTranslatedPath } from '../../i18n/utils';
+import { Pill } from '@eliancodes/brutal-ui';
+
+const lang = getLangFromUrl(Astro.url);
+const translatePath = useTranslatedPath(lang);
+---
+<ul class='mt-2 flex gap-4 flex-wrap'>
+  {Object.entries(languages).map(([lang, label]) => (
+    <li>
+        <a style="color:black;font-weight:bold;" class='sanchez' href={translatePath('/', lang)}><Pill>{label}</Pill></a>
+    </li>
+  ))}
+</ul>

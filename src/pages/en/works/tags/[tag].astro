@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '@layouts/Default.astro';
+import WorkList from '@components/works/WorkList.astro';
+import { Button } from '@eliancodes/brutal-ui';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('works').then((collection) =>
+    collection.reverse()
+  );
+
+  const tags: string[] = [];
+
+  allPosts.forEach((post) => {
+    post.data.tags.forEach((tag) => {
+      tags.push(tag.toLowerCase());
+    });
+  });
+
+  return Array.from(new Set(tags)).map((tag) => {
+    return {
+      params: { tag },
+      props: {
+        tag,
+        worksposts: allPosts.filter((post) =>
+          post.data.tags.map((tag) => tag.toLowerCase()).includes(tag)
+        ),
+      },
+    };
+  });
+}
+
+interface Props {
+  tag: string;
+  worksposts: CollectionEntry<'works'>[];
+}
+
+const { tag, worksposts } = Astro.props;
+---
+
+<Layout
+  title={`Credits: ${tag}`}
+  description={`Credits | All credits of ${tag}`}
+  pageTitle={`Credits | Tagged with ${tag}`}
+>
+  <main class='p-6 bg-purple grid gap-4'>
+    <div>
+      <Button href='/works/'>&larr; Back to credits</Button>
+    </div>
+    <WorkList posts={worksposts} />
+  </main>
+</Layout>

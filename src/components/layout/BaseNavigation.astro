@@ -1,11 +1,16 @@
 ---
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 interface Props {
   pageTitle?: string;
 }
 
 const navigationItems = [
-  { name: 'Home', url: '/' },
-  { name: 'Credits', url: '/works/' },
+  { name: t('nav.home'), url: `/${lang}` },
+  { name: t('nav.credits'), url: `/${lang}/works/` },
 ];
 
 const socialIcons = [
@@ -31,7 +36,7 @@ const { pageTitle } = Astro.props;
     <p class='righteous md:text-5xl'>Pablo Fergus</p>
   </a>
   <nav class='hidden md:inline-block'>
-    <h2 class='hidden'>Navigation</h2>
+    <h2 class='hidden'>{t('nav.navigation')}</h2>
     <ul class='flex gap-8 poppins'>
       {
         navigationItems.map((item) => (
@@ -63,7 +68,7 @@ const { pageTitle } = Astro.props;
     </ul>
   </nav>
   <nav class='md:hidden flex'>
-    <h2 class='hidden'>Mobile Navigation</h2>
+    <h2 class='hidden'>{t('nav.mobilenav')}</h2>
     <ul>
       <li><a href='/works/'>Credits</a></li>
     </ul>
